@@ -1,39 +1,63 @@
-name: Sincronizar Notion para GitHub
+name: Sincronizar Notion e Deploy do Site
 
 on:
-  # permite rodar manualmente clicando num botão no GitHub
   workflow_dispatch:
-  
-  # roda automaticamente todos os dias à meia-noite (acho que no Horário UTC)
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *' # Roda todo dia à meia-noite
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  sync:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     
     steps:
-      - name: 1. Baixar o código do repositório
-        uses: actions/checkout@v3
+      - name: 1. Checkout do Repositório
+        uses: actions/checkout@v4
 
-      - name: 2. Configurar o Node.js
-        uses: actions/setup-node@v3
+      - name: 2. Configurar Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 20
+          cache: npm
 
-      - name: 3. Instalar bibliotecas do Notion
-        run: npm install @notionhq/client notion-to-md
+      - name: 3. Instalar Dependências
+        run: npm install
 
-      - name: 4. Rodar o script de sincronização
+      - name: 4. Baixar notas do Notion
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
         run: node sync.js
 
-      - name: 5. Fazer o Commit e Push das notas
+      - name: 5. Commitar novas notas no repositório
         run: |
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'actions@github.com'
-          git add notas/
-          # Só faz o commit se houver alguma alteração nas notas
-          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: atualizando anotações do Notion" && git push)
+          git add docs/notas/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: atualizando notas do Notion [skip ci]" && git push)
+
+      - name: 6. Build do VitePress
+        run: npm run docs:build
+
+      - name: 7. Configurar Pages
+        uses: actions/configure-pages@v4
+
+      - name: 8. Upload do Site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+      - name: 9. Deploy para GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
