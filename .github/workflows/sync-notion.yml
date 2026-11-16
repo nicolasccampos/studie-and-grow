@@ -1,0 +1,39 @@
+name: Sincronizar Notion para GitHub
+
+on:
+  # permite rodar manualmente clicando num botão no GitHub
+  workflow_dispatch:
+  
+  # roda automaticamente todos os dias à meia-noite (acho que no Horário UTC)
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 1. Baixar o código do repositório
+        uses: actions/checkout@v3
+
+      - name: 2. Configurar o Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 3. Instalar bibliotecas do Notion
+        run: npm install @notionhq/client notion-to-md
+
+      - name: 4. Rodar o script de sincronização
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: node sync.js
+
+      - name: 5. Fazer o Commit e Push das notas
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add notas/
+          # Só faz o commit se houver alguma alteração nas notas
+          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: atualizando anotações do Notion" && git push)
