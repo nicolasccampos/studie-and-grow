@@ -35,4 +35,7 @@ async function syncNotion() {
   console.log("Sincronização com VitePress concluída!");
 }
 
-syncNotion().catch(console.error);
+syncNotion().catch((err) => {
+  console.error("ERRO NO NOTION:", err);
+  process.exit(1); // Faz a action mostrar o erro exato se falhar
+});
