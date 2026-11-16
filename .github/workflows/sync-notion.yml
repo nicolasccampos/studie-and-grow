@@ -48,7 +48,7 @@ jobs:
           git diff --quiet && git diff --staged --quiet || (git commit -m "docs: atualizando notas do Notion [skip ci]" && git push)
 
       - name: 6. Build do VitePress
-        run: npm run docs:build
+        run: npx vitepress build docs
 
       - name: 7. Configurar Pages
         uses: actions/configure-pages@v4

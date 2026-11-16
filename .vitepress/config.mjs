@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/studie-and-grow/',
   title: "Nicolasccampos Docs",
   description: "Documentação dos meus estudos",
   themeConfig: {
