@@ -138,29 +138,29 @@ Um dos diagramas mais conhecidos de UML, onde a UML leva a simplicidade ao estre
 Pro diagrama de Classes, toda classe é representada por um retângulo.
 
 
-### Modificadores de Visibilidade
+### Modificadores de visibilidade
 
 
 Indicam o nível de acesso aos componentes internos de uma classe.
 
 
- Símbolo + para público
+Símbolo + para público
 
 
-    Ex: Telefone Publico (Orelhão)
+    Ex.: telefone público (orelhão)
 
-- Tratasse de um método que qualquer um pode usar.
+- Trata-se de um método que qualquer pessoa pode usar.
 
 Símbolo - para privado
 
 
-    Ex: Telefone privado (Celular)
+    Ex.: telefone privado (celular)
 
-- Método que apenas Eu posso usar.
+- Método que apenas eu posso usar.
 
 Símbolo # para protegido
 
 
-    Ex: Telefone Protegido (Telefone residencial)
+    Ex.: telefone protegido (telefone residencial)
 
-- Método que apenas a minha mãe e os filhos dela podem usar (logo haverá o conceito de Herança em POO)
+- Método que apenas minha mãe e os filhos dela podem usar (logo, haverá o conceito de herança em POO).
