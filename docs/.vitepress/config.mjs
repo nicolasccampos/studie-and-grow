@@ -1,29 +1,53 @@
 import { defineConfig } from 'vitepress'
+import fs from 'node:fs'
+import path from 'node:path'
 
-// https://vitepress.dev/reference/site-config
+// Os arquivos sincronizados do Notion ficam em docs/notas/
+const notesDir = path.resolve(process.cwd(), 'docs/notas')
+
+const noteItems = fs.existsSync(notesDir)
+  ? fs.readdirSync(notesDir, { withFileTypes: true })
+      .filter(
+        (file) =>
+          file.isFile() &&
+          file.name.toLowerCase().endsWith('.md') &&
+          file.name.toLowerCase() !== 'index.md'
+      )
+      .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'))
+      .map((file) => {
+        const slug = file.name.replace(/\.md$/i, '')
+        return {
+          text: slug.replace(/-/g, ' '),
+          link: `/notas/${slug}`
+        }
+      })
+  : []
+
 export default defineConfig({
   base: '/studie-and-grow/',
-  title: "Nicolasccampos Docs",
-  description: "Documentação dos meus estudos",
+  title: 'Estudos de Nicolas',
+  description: 'Anotações dos meus estudos de desenvolvimento',
+
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Início', link: '/' },
+      { text: 'Anotações', link: '/notas/' }
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/notas/': [
+        {
+          text: 'Estudos pessoais',
+          items: [
+            { text: 'Visão geral', link: '/notas/' },
+            ...noteItems
+          ]
+        }
+      ]
+    },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    search: {
+      provider: 'local'
+    }
   }
 })

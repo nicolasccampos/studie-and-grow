@@ -1,25 +1,20 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "Nicolasccampos Docs"
-  text: "Documentação dos meus estudos"
-  tagline: My great project tagline
+  name: "Nicolas Campos"
+  text: "Caderno de estudos"
+  tagline: "Anotações e aprendizados sobre desenvolvimento de software."
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: "Explorar anotações"
+      link: /notas/
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: "Estudos"
+    details: "Anotações organizadas por assunto."
+  - title: "Atualizado pelo Notion"
+    details: "O conteúdo é sincronizado automaticamente."
+  - title: "Versionado no GitHub"
+    details: "As alterações ficam registradas no histórico do projeto."
 ---
-
