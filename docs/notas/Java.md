@@ -186,13 +186,13 @@ Para variáveis booleanas, não é necessário comparar com `== true`. Basta ava
 
 
 ```java
-// Perigoso: um único sinal de igual atribui true por engano.
+//perigoso porque um único sinal de igual atribui true por engano.
 if (this.tampada = true) { ... }
 
-// Forma direta de verificar se o valor é true.
+//forma direta de verificar se o valor é true.
 if (this.tampada) { ... }
 
-// O operador ! verifica se o valor é false.
+//operador ! verifica se o valor é false.
 if (!this.tampada) { ... }
 ```
 
