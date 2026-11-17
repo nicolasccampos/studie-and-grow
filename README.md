@@ -155,4 +155,4 @@ Projeto pessoal de estudos. Sinta-se à vontade para usar como referência.
 
 ---
 
-Desenvolvido por [Nicolas Coimbra](https://github.com/nicolasccampos)
+Desenvolvido por [Nicolas Coimbra de Campos](https://github.com/nicolasccampos)
