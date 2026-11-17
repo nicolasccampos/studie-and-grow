@@ -31,7 +31,7 @@ O workflow roda **manualmente** (*Run workflow*) ou **diariamente**, à meia-noi
 
 ## Tecnologias
 
-- **Node.js**: execução do script de sincronização
+- **Node.js, versão 18 ou superior**: execução do script de sincronização
 - **Notion API**: leitura das páginas da base de estudos
 - **notion-to-md**: conversão dos blocos do Notion para Markdown
 - **VitePress**: geração do site de documentação
