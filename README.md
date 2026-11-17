@@ -1,4 +1,4 @@
-# 📚 Studie and Grow
+# Studie and Grow
 
 Caderno de estudos automatizado: as anotações são escritas no **Notion** e publicadas como um site de documentação com **VitePress**, gerado e hospedado pelo **GitHub Actions** e pelo **GitHub Pages**.
 
@@ -6,13 +6,13 @@ Caderno de estudos automatizado: as anotações são escritas no **Notion** e pu
 
 ---
 
-## 🎯 Motivação
+## Motivação
 
 Quero registrar meus estudos em um lugar que seja fácil de escrever e fácil de consultar. O Notion é ótimo para escrever, mas não é um lugar de publicação. Este projeto automatiza essa ponte: eu escrevo no Notion, e o site é atualizado com o conteúdo, sem copiar e colar nada manualmente.
 
 ---
 
-## ⚙️ Como funciona
+## Como funciona
 
 ```mermaid
 flowchart LR
@@ -23,17 +23,17 @@ flowchart LR
     E -->|deploy-pages| F[GitHub Pages]
 ```
 
-1. O script `sync.js` consulta a base de dados do Notion pela API oficial.
-2. Cada página é convertida de blocos do Notion para Markdown com a biblioteca `notion-to-md`.
-3. Os arquivos são salvos em `docs/notas/`.
-4. O VitePress gera o site estático a partir de `docs/`.
-5. O workflow publica o resultado no GitHub Pages.
+- O script `sync.js` consulta a base de dados do Notion pela API oficial.
+- Cada página é convertida de blocos do Notion para Markdown com a biblioteca `notion-to-md`.
+- Os arquivos são salvos em `docs/notas/`.
+- O VitePress gera o site estático a partir de `docs/`.
+- O workflow publica o resultado no GitHub Pages.
 
 O workflow roda **manualmente** (botão *Run workflow*) ou **diariamente**, à meia-noite UTC.
 
 ---
 
-## 🧰 Tecnologias
+## Tecnologias
 
 - **Node.js 20**: execução do script de sincronização
 - **Notion API**: leitura das páginas da base de estudos
@@ -44,7 +44,7 @@ O workflow roda **manualmente** (botão *Run workflow*) ou **diariamente**, à m
 
 ---
 
-## 📁 Estrutura do projeto
+##  Estrutura do projeto
 
 ```text
 studie-and-grow/
@@ -64,14 +64,14 @@ studie-and-grow/
 
 ---
 
-## 🔐 Configuração
+##  Configuração
 
 ### 1. Criar a integração no Notion
 
-1. Acesse [notion.so/my-integrations](https://www.notion.so/my-integrations) e crie uma integração interna.
-2. Copie o **Internal Integration Secret**. Ele será o `NOTION_TOKEN`.
-3. Na página da base de estudos, clique em `...` > **Connect to** e selecione a integração. Sem isso, a API não consegue ler a base.
-4. O `NOTION_DATABASE_ID` é o código de 32 caracteres que aparece na URL da base, antes de `?v=`.
+- Acesse [notion.so/my-integrations](https://www.notion.so/my-integrations) e crie uma integração interna.
+-  Copie o **Internal Integration Secret**. Ele será o `NOTION_TOKEN`.
+- Na página da base de estudos, clique em `...` > **Connect to** e selecione a integração. Sem isso, a API não consegue ler a base.
+- O `NOTION_DATABASE_ID` é o código de 32 caracteres que aparece na URL da base, antes de `?v=`.
 
 ### 2. Configurar os segredos no GitHub
 
@@ -90,7 +90,7 @@ Em **Settings > Pages**, em *Build and deployment*, selecione **GitHub Actions**
 
 ---
 
-## 💻 Como rodar localmente
+##  Como rodar localmente
 
 Pré-requisitos: Node.js 18 ou superior e Git.
 
@@ -121,7 +121,7 @@ npm run docs:build
 
 ---
 
-## 🚀 Publicação
+## Publicação
 
 1. Edite as páginas no Notion.
 2. Acesse a aba **Actions** do repositório.
@@ -132,7 +132,7 @@ Se houver alterações nas notas, o workflow faz commit automático em `docs/not
 
 ---
 
-## 🧩 Desafios resolvidos
+## Desafios resolvidos
 
 - **Caminho base do GitHub Pages:** o site fica em `/studie-and-grow/`, então o VitePress precisou da opção `base` configurada. Sem ela, CSS e rotas quebravam.
 - **Pasta `node_modules` no Git:** dependências foram enviadas por engano ao repositório. Resolvi com um `.gitignore` na raiz e removendo a pasta do rastreamento com `git rm -r --cached`.
@@ -142,7 +142,7 @@ Se houver alterações nas notas, o workflow faz commit automático em `docs/not
 
 ---
 
-## 🗺️ Próximos passos
+## Próximos passos
 
 - [ ] Publicar somente páginas marcadas com uma propriedade "Publicar" no Notion
 - [ ] Gerar o menu lateral com categorias a partir das propriedades da base
@@ -151,7 +151,7 @@ Se houver alterações nas notas, o workflow faz commit automático em `docs/not
 
 ---
 
-## 📄 Licença
+## Licença
 
 Projeto pessoal de estudos. Sinta-se à vontade para usar como referência.
 
