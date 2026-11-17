@@ -2,7 +2,6 @@ import { defineConfig } from 'vitepress'
 import fs from 'node:fs'
 import path from 'node:path'
 
-// Os arquivos sincronizados do Notion ficam em docs/notas/
 const notesDir = path.resolve(process.cwd(), 'docs/notas')
 
 const noteItems = fs.existsSync(notesDir)
