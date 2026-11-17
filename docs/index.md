@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "Nicolas Campos"
+  name: "Nicolas Coimbra de Campos"
   text: "Caderno de estudos"
   tagline: "Anotações e aprendizados sobre desenvolvimento de software."
   actions:
