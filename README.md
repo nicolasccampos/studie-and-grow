@@ -1,14 +1,16 @@
 # Studie and Grow
 
-Caderno de estudos automatizado: as anotações são escritas no **Notion** e publicadas como um site de documentação com **VitePress**, gerado e hospedado pelo **GitHub Actions** e pelo **GitHub Pages**.
+Caderno de estudos automatizado: escrevo as anotações no **Notion** e o conteúdo é publicado como site de documentação com **VitePress**, via **GitHub Actions** e **GitHub Pages**.
 
-🌐 **Site publicado:** https://nicolasccampos.github.io/studie-and-grow/
+🌐 **Site:** https://nicolasccampos.github.io/studie-and-grow/
+
+![Deploy](https://github.com/nicolasccampos/studie-and-grow/actions/workflows/sync-notion.yml/badge.svg)
 
 ---
 
 ## Motivação
 
-Quero registrar meus estudos em um lugar que seja fácil de escrever e fácil de consultar. O Notion é ótimo para escrever, mas não é um lugar de publicação. Este projeto automatiza essa ponte: eu escrevo no Notion, e o site é atualizado com o conteúdo, sem copiar e colar nada manualmente.
+Quero registrar meus estudos em um lugar fácil de escrever e fácil de consultar. O Notion é ótimo para escrever, mas não publica. Este projeto faz essa ponte: escrevo no Notion e o site é atualizado sem copiar e colar nada manualmente.
 
 ---
 
@@ -23,57 +25,50 @@ flowchart LR
     E -->|deploy-pages| F[GitHub Pages]
 ```
 
-- O script `sync.js` consulta a base de dados do Notion pela API oficial.
-- Cada página é convertida de blocos do Notion para Markdown com a biblioteca `notion-to-md`.
-- Os arquivos são salvos em `docs/notas/`.
-- O VitePress gera o site estático a partir de `docs/`.
-- O workflow publica o resultado no GitHub Pages.
-
-O workflow roda **manualmente** (botão *Run workflow*) ou **diariamente**, à meia-noite UTC.
+O workflow roda **manualmente** (*Run workflow*) ou **diariamente**, à meia-noite UTC.
 
 ---
 
 ## Tecnologias
 
-- **Node.js 20**: execução do script de sincronização
+- **Node.js**: execução do script de sincronização
 - **Notion API**: leitura das páginas da base de estudos
 - **notion-to-md**: conversão dos blocos do Notion para Markdown
 - **VitePress**: geração do site de documentação
-- **GitHub Actions**: automação do fluxo de sincronização, build e deploy
-- **GitHub Pages**: hospedagem do site
+- **GitHub Actions**: sincronização, build e deploy
+- **GitHub Pages**: hospedagem
 
 ---
 
-##  Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 studie-and-grow/
 ├── .github/
 │   └── workflows/
-│       └── sync-notion.yml    # Workflow: sincronização, build e deploy
+│       └── sync-notion.yml    # Sincronização, build e deploy
 ├── docs/
 │   ├── .vitepress/
 │   │   └── config.mjs         # Configuração do site e menu lateral
 │   ├── notas/                 # Páginas geradas a partir do Notion
-│   ├── index.md               # Página inicial
-│   └── ...
+│   └── index.md               # Página inicial
 ├── .gitignore
 ├── package.json
-└── sync.js                    # Script que lê o Notion e gera os arquivos .md
+└── sync.js                    # Lê o Notion e gera os arquivos .md
 ```
 
 ---
 
-##  Configuração
+## Configuração
 
-### 1. Criar a integração no Notion
+### 1. Integração no Notion
 
-- Acesse [notion.so/my-integrations](https://www.notion.so/my-integrations) e crie uma integração interna.
--  Copie o **Internal Integration Secret**. Ele será o `NOTION_TOKEN`.
-- Na página da base de estudos, clique em `...` > **Connect to** e selecione a integração. Sem isso, a API não consegue ler a base.
-- O `NOTION_DATABASE_ID` é o código de 32 caracteres que aparece na URL da base, antes de `?v=`.
+- Crie uma integração interna em [notion.so/my-integrations](https://www.notion.so/my-integrations).
+- Copie o **Internal Integration Secret**. Ele será o `NOTION_TOKEN`.
+- Na página da base de estudos, em `...` > **Connect to**, selecione a integração. Sem isso, a API não consegue ler a base.
+- O `NOTION_DATABASE_ID` é o código de 32 caracteres na URL da base, antes de `?v=`.
 
-### 2. Configurar os segredos no GitHub
+### 2. Segredos no GitHub
 
 Em **Settings > Secrets and variables > Actions**, crie:
 
@@ -82,15 +77,15 @@ Em **Settings > Secrets and variables > Actions**, crie:
 | `NOTION_TOKEN` | Token da integração |
 | `NOTION_DATABASE_ID` | ID da base de dados |
 
-Em **Settings > Actions > General**, em *Workflow permissions*, marque **Read and write permissions**, para que o workflow consiga fazer commit.
+Em **Settings > Actions > General**, em *Workflow permissions*, marque **Read and write permissions** para que o workflow consiga fazer commit.
 
-### 3. Ativar o GitHub Pages
+### 3. GitHub Pages
 
 Em **Settings > Pages**, em *Build and deployment*, selecione **GitHub Actions** como fonte.
 
 ---
 
-##  Como rodar localmente
+## Como rodar localmente
 
 Pré-requisitos: Node.js 18 ou superior e Git.
 
@@ -102,14 +97,19 @@ cd studie-and-grow
 # 2. Instalar as dependências
 npm install
 
-# 3. Definir as variáveis de ambiente (PowerShell)
+# 3. Definir as variáveis de ambiente
+# PowerShell
 $env:NOTION_TOKEN="seu_token"
 $env:NOTION_DATABASE_ID="seu_database_id"
 
-# 4. Sincronizar as notas do Notion
+# Linux/macOS
+export NOTION_TOKEN="seu_token"
+export NOTION_DATABASE_ID="seu_database_id"
+
+# 4. Sincronizar as notas
 node sync.js
 
-# 5. Visualizar o site localmente
+# 5. Visualizar o site
 npm run docs:dev
 ```
 
@@ -134,19 +134,17 @@ Se houver alterações nas notas, o workflow faz commit automático em `docs/not
 
 ## Desafios resolvidos
 
-- **Caminho base do GitHub Pages:** o site fica em `/studie-and-grow/`, então o VitePress precisou da opção `base` configurada. Sem ela, CSS e rotas quebravam.
-- **Pasta `node_modules` no Git:** dependências foram enviadas por engano ao repositório. Resolvi com um `.gitignore` na raiz e removendo a pasta do rastreamento com `git rm -r --cached`.
-- **Conflitos de merge:** o robô do workflow fazia commits enquanto eu commitava localmente, o que gerou conflitos. Resolvi sincronizando com `git pull` antes de enviar as alterações.
-- **Erro na biblioteca do Notion:** a chamada `notion.databases.query` falhou em uma versão da biblioteca. Troquei a consulta por uma chamada direta à API REST com `fetch`, usando a versão `2022-06-28` do cabeçalho `Notion-Version`.
-- **Organização do VitePress:** o build só funcionou depois que `.vitepress/` e as páginas foram movidos para dentro de `docs/`, que é a pasta de conteúdo do projeto.
+- **Caminho base do GitHub Pages:** o site fica em `/studie-and-grow/`, então foi preciso configurar a opção `base` do VitePress. Sem ela, CSS e rotas quebravam.
+- **`node_modules` versionado:** dependências foram enviadas por engano ao repositório. Resolvi com um `.gitignore` na raiz e removendo a pasta do rastreamento com `git rm -r --cached`.
+- **Conflitos de push:** o workflow fazia commits em `main` enquanto eu enviava alterações locais. Resolvi integrando o remoto com `git pull` e removendo arquivos gerados que não deveriam ser versionados.
+- **Erro na biblioteca do Notion:** a chamada `notion.databases.query` falhou em uma versão da biblioteca. Troquei por uma chamada direta à API REST com `fetch`, usando o cabeçalho `Notion-Version: 2022-06-28`.
+- **Organização do VitePress:** o build só funcionou depois que `.vitepress/` e as páginas foram movidos para dentro de `docs/`, a pasta de conteúdo do projeto.
 
 ---
 
 ## Próximos passos
 
 - [ ] Publicar somente páginas marcadas com uma propriedade "Publicar" no Notion
-- [ ] Gerar o menu lateral com categorias a partir das propriedades da base
-- [ ] Adicionar testes para a conversão de blocos do Notion
 - [ ] Baixar imagens do Notion para o repositório, já que as URLs temporárias expiram
 
 ---
@@ -157,4 +155,4 @@ Projeto pessoal de estudos. Sinta-se à vontade para usar como referência.
 
 ---
 
-Desenvolvido por [Nicolas Coimbra](https://github.com/nicolasccampos) 👨‍💻
+Desenvolvido por [Nicolas Coimbra](https://github.com/nicolasccampos)
