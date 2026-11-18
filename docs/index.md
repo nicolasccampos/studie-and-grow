@@ -1,5 +1,20 @@
-# Anotações
+---
+layout: home
 
-Notas publicadas dos meus estudos.
+hero:
+  name: "Nicolas Coimbra de Campos"
+  text: "Caderno de estudos"
+  tagline: "Anotações e aprendizados sobre desenvolvimento de software."
+  actions:
+    - theme: brand
+      text: "Explorar anotações"
+      link: /notas/
 
-- [JavaScript](./JavaScript.md)
+features:
+  - title: "Estudos"
+    details: "Anotações organizadas por assunto."
+  - title: "Atualizado pelo Notion"
+    details: "O conteúdo é sincronizado automaticamente."
+  - title: "Versionado no GitHub"
+    details: "As alterações ficam registradas no histórico do projeto."
+---
