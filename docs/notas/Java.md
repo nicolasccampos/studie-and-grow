@@ -196,3 +196,56 @@ if (this.tampada) { ... }
 if (!this.tampada) { ... }
 ```
 
+
+---
+
+
+### **Métodos**
+
+
+Um método representa uma operação que pode ser executada dentro de uma classe. Pode receber parâmetros e retornar um resultado.
+
+
+Sua estrutura possui um tipo de retorno, um nome e os parâmetros necessários.
+
+
+Exemplo: `int somar(int numero1, int numero2)`.
+
+
+O tipo de retorno indica o que o método devolve, enquanto os parâmetros representam as informações que ele recebe.
+
+
+Quando um método é declarado em uma interface, sem implementação, sua declaração termina com ponto e vírgula.
+
+
+### **Classes e interfaces**
+
+
+Uma classe permite criar objetos e definir seus atributos e comportamentos.
+
+
+Já uma interface define um contrato que pode ser seguido por classes ou implementações. Ela é bastante utilizada para organizar responsabilidades e estabelecer quais operações estarão disponíveis.
+
+
+### **Construtores e final**
+
+
+O construtor é executado durante a criação de um objeto. Possui o mesmo nome da classe e não declara um tipo de retorno.
+
+
+Posso utilizá-lo para receber informações e inicializar os atributos de um objeto.
+
+
+O modificador `final` impede que uma variável receba outra atribuição depois de inicializada. É útil para atributos que devem permanecer com a mesma referência durante a execução do objeto.
+
+
+### **Optional e List**
+
+
+São estruturas utilizadas para representar resultados de formas diferentes.
+
+- `Optional<T>` representa um resultado que pode ou não estar presente. O método `isPresent()` verifica se existe um valor.
+- `List<T>` representa uma coleção de elementos do mesmo tipo, permitindo trabalhar com vários resultados.
+
+A escolha depende do que espero receber de uma operação: um possível resultado ou uma coleção de resultados.
+

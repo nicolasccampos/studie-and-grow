@@ -1,52 +1,37 @@
 # Spring Boot
 
 
-# Classe principal e inicialização
+#  Classe principal e inicialização
 
 
-_18/11/2026_
+A classe principal é responsável por fornecer o ponto de entrada da aplicação Java e inicializar o ambiente Spring Boot.
 
 
-## 1. O que é a classe principal?
+O `package` organiza as classes em grupos lógicos, enquanto `import` permite utilizar classes e anotações de outros pacotes.
 
 
-É a classe responsável por fornecer o ponto de entrada da aplicação Java e iniciar o ambiente Spring Boot.
+### @SpringBootApplication
 
 
-## 2. Package
-
-
-O `package` organiza as classes em grupos lógicos, facilita a manutenção do código e evita conflitos entre nomes de classes.
-
-
-## 3. Imports
-
-
-A palavra-chave `import` permite utilizar classes e anotações definidas em outros pacotes.
-
-
-## 4. @SpringBootApplication
-
-
-Anotação principal do Spring Boot. Reúne três funcionalidades:
+É a anotação principal do Spring Boot. Reúne três funcionalidades:
 
 - `@SpringBootConfiguration`: permite definir configurações da aplicação.
-- `@EnableAutoConfiguration`: ativa a configuração automática de componentes conforme as dependências disponíveis.
+- `@EnableAutoConfiguration`: ativa configurações automáticas conforme as dependências disponíveis.
 - `@ComponentScan`: procura componentes gerenciados pelo Spring nos pacotes correspondentes.
 
-## 5. Método main()
+Por padrão, a busca começa no pacote da classe principal e inclui seus subpacotes.
 
 
-É o ponto de entrada de uma aplicação Java. É por meio dele que a JVM inicia a execução do programa.
+### main() e SpringApplication.run()
 
 
-## 6. SpringApplication.run()
+O `main()` é o ponto de entrada de uma aplicação Java, por meio do qual a JVM inicia a execução.
 
 
-Inicializa o ambiente Spring Boot, configura os componentes da aplicação e inicia o servidor web quando aplicável.
+O `SpringApplication.run()` inicializa o ambiente Spring Boot, configura os componentes e inicia o servidor web quando aplicável.
 
 
-## 7. Exemplo
+Exemplo:
 
 
 ```text
@@ -60,91 +45,157 @@ public class Application {
 ```
 
 
-## 8. Resumo
+##  JPA e Hibernate
 
 
-A classe principal inicializa a aplicação Java e permite que o Spring Boot configure e gerencie seus componentes. A anotação `@SpringBootApplication` é fundamental nesse processo.
+O JPA é uma especificação utilizada para mapear objetos Java para tabelas do banco de dados. O Hibernate é uma das implementações dessa especificação.
 
 
----
+### Mapeamento de entidades
 
+- `@Entity`: identifica uma classe como entidade persistente.
+- `@Table`: permite definir o nome da tabela.
+- `@Id`: identifica a chave primária.
+- `@GeneratedValue`: configura a geração automática do identificador.
+- `@Column`: configura características de uma coluna.
 
-## **JPA e Hibernate**
-
-
-_19/11/2026_
-
-
-### **Mapeamento de entidades: @Entity e @Table**
-
-
-A anotação `@Entity` indica que uma classe Java será mapeada como uma entidade do banco de dados. Já `@Table` permite definir o nome da tabela correspondente.
-
-
-É útil definir o nome manualmente para seguir um padrão ou evitar conflitos com palavras reservadas do banco.
-
-
-**Colunas e restrições: @Column e @JoinColumn**
-
-
-A anotação `@Column` permite configurar as características de uma coluna:
+Algumas propriedades importantes de `@Column`:
 
 - `name`: define o nome da coluna.
 - `nullable = false`: não permite valores nulos.
 - `unique = true`: exige valores únicos.
-- `updatable = false`: impede que o Hibernate atualize o valor da coluna.
+- `updatable = false`: impede que o Hibernate altere a coluna durante atualizações.
 
-Já `@JoinColumn` é utilizada em relacionamentos para definir a coluna que representa a chave estrangeira.
-
-
-### **Relacionamentos entre entidades**
-
-
-**Link:** Diferenças entre `@OneToMany`, `@ManyToMany`, `@ManyToOne` e `@OneToOne`
-
-
-    [https://pt.stackoverflow.com/questions/234755/diferen%C3%A7as-onetomany-manytomany-manytoone-onetoone](https://pt.stackoverflow.com/questions/234755/diferen%C3%A7as-onetomany-manytomany-manytoone-onetoone)
-
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b8fa5d00-555a-819e-8607-0003545fd436/6afc6484-ead3-4c83-b0d8-ca50deb7892d/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667DGGDYNB%2F20261119%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261119T153604Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE8aCXVzLXdlc3QtMiJIMEYCIQC%2Fa8vC2MxmnjdQL8MMyXd3h080IV1K%2BgbUyIC8p5metgIhAL39jmOBnm%2FJj1f%2BsSGBciIdSj%2FTBBGJJI11AMOODRvZKv8DCBgQABoMNjM3NDIzMTgzODA1IgxMGn%2BZslqHTIue3OQq3APqVbmvIG8oykZLXiOyRv%2FkZz76%2FwAFjjrxDO80tfSds%2FD8zORduxzMtcWhlZLjv67BrSf1EaJkHtME8soDaRcioX6Yr41X7UU48gYouoRWPHsgXBa9QfnJzAK5DK1DvDgau%2BeboMNVd1Vkpwf3rLMaI66mUgqR0rAzjhvZv56J8n%2F1YEX7H1v52G5BB5rheEmAdE9taZPrX%2FxdMa4bzi4gJpYxzCq7yBfKA7SdUHF91tkJ12%2BpP7tVA2RdqdmplzEwyvuo8iDSJmRp%2F7owAbXGS6vKnCBuJZ0pcLS4JlBiZm7K3%2FaYzdZZfA5jaPiAljbc8pU7mGHjPnStXaanK2B2NtrPQhen8mN9DUOKCUzT5S%2Fmge3MIqyVuqnS1xFPu1MRDQGV%2FGuxMayX%2FcDPkB9cbrj5ozU4aAvvm2pWZhh2lbT8fctgX5QdYfLzVc459vFioEVUNSSKkdzjqW1CXe333A1GY2bwHHPR%2Bq%2FJfK51UjxB4U7%2BlEtJHjDBvekvEywLfWGT%2Bxvf%2BmpfbYd2vVltA1WrpjJNM6kk17oT9XxH0joLcJ%2B%2FVUJ4TgZjH3Jn1pg%2BKfHX%2BJJ0ZlfcnKcrEVMIa40WG%2BgHW0HjNb9lX0mRKnkyxKfpmXJdYa%2F00TC%2BlfzXBjqkAWNB%2B0MRw%2BLJO7%2FcJUIzUAO3aZH32kTw7SdbKD0R1ME4%2FdV8NCk%2FAQD%2BE1ZI5dRBks%2BEuoenRpfhE0lCTPA87Xvuu5uqFqEjaY24HTNPFBlAquGPuhv78VK3ycexok%2BWrvdV0Me7ggQWQXO93ykjaq3RulR3eW4bRj9cB28QW%2F4QRgsZAx9ucyA7ATnuTTDNhP5F3VHbubS4Gvp1VQAQ1iVsxsxm&X-Amz-Signature=741e6499f5794a98ce4ecc36046a0107a6b866655b96579ba9f7ac68c3f24d3b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+### Relacionamentos entre entidades
 
 
 Os principais tipos de relacionamento no JPA são:
 
-- `@OneToOne`: uma entidade se relaciona com apenas uma outra.
-- `@OneToMany`: uma entidade pode se relacionar com várias outras.
-- `@ManyToOne`: várias entidades podem se relacionar com uma única.
-- `@ManyToMany`: várias entidades podem se relacionar com várias outras.
+- `@OneToOne`: um para um.
+- `@OneToMany`: um para muitos.
+- `@ManyToOne`: muitos para um.
+- `@ManyToMany`: muitos para muitos.
 
-Em relacionamentos bidirecionais com `@OneToMany` e `@ManyToOne`, normalmente o lado `ManyToOne` é o proprietário, pois contém a chave estrangeira.
-
-
-O `mappedBy` é utilizado no lado inverso para indicar qual atributo da outra entidade controla o relacionamento. É importante lembrar que ele recebe o nome do atributo Java, não o nome da coluna no banco.
+    **Link:** [Diferenças entre OneToMany, ManyToMany, ManyToOne e OneToOne](https://pt.stackoverflow.com/questions/234755/diferen%C3%A7as-onetomany-manytomany-manytoone-onetoone?utm_source=chatgpt.com)
 
 
-Assim, as duas entidades conseguem navegar pelo relacionamento sem precisar configurar duas chaves estrangeiras.
+Em um relacionamento entre OneToMany e ManyToOne, várias entidades podem estar associadas a uma única entidade.
 
 
-### **Callbacks do ciclo de persistência: @PrePersist**
+Normalmente, o lado ManyToOne possui a chave estrangeira e é o lado proprietário do relacionamento.
 
 
-O `@PrePersist` permite executar um método automaticamente antes de uma entidade ser inserida pela primeira vez no banco de dados.
+O `@JoinColumn` permite definir a coluna utilizada como chave estrangeira.
 
 
-É útil para preencher informações automaticamente, como datas de criação. Por exemplo, `LocalDateTime.now()` retorna a data e o horário atuais.
+Já o `mappedBy` é utilizado no lado inverso para indicar qual atributo da outra entidade controla o relacionamento. Seu valor deve ser o nome do atributo Java, não o nome da coluna no banco.
 
 
-Combinado com `updatable = false`, posso garantir que o Hibernate não altere esse campo durante atualizações posteriores.
+### Callbacks de persistência: @PrePersist
 
 
-### **Repository**
+O `@PrePersist` permite executar um método automaticamente antes de uma entidade ser inserida pela primeira vez no banco.
+
+
+É útil para preencher informações automaticamente, como datas de criação.
+
+
+Com `LocalDateTime.now()`, obtenho a data e o horário atuais.
+
+
+Combinado com `updatable = false`, o Hibernate não altera essa coluna durante atualizações posteriores.
+
+
+##  Repository e Spring Data JPA
 
 
 O Repository é responsável pelo acesso aos dados da aplicação, fazendo a comunicação entre o código e o banco de dados.
 
 
-Com Spring Data JPA, consigo utilizar operações como salvar, buscar e excluir registros sem precisar implementar manualmente cada consulta SQL.
+Com Spring Data JPA, consigo utilizar operações comuns sem implementar manualmente cada consulta.
 
 
-### 
+### JpaRepository
+
+
+O `JpaRepository` disponibiliza métodos prontos, como:
+
+- `save()`: salva ou atualiza um registro.
+- `findById()`: busca pelo identificador.
+- `findAll()`: retorna os registros.
+- `deleteById()`: exclui pelo identificador.
+- `existsById()`: verifica se um registro existe.
+
+Ao estender `JpaRepository`, preciso informar dois tipos utilizando Generics:
+
+1. A entidade que será gerenciada.
+2. O tipo do identificador dessa entidade.
+
+O Spring Data JPA identifica a interface e fornece automaticamente uma implementação em tempo de execução. Não preciso implementar manualmente os métodos básicos nem adicionar `@Repository` à interface nesses casos.
+
+
+##  Consultas derivadas (Derived Queries)
+
+
+O Spring Data JPA consegue criar consultas automaticamente a partir do nome dos métodos declarados no Repository.
+
+
+Utilizo o padrão `findBy` seguido do nome do atributo que desejo pesquisar.
+
+
+Por exemplo, `findByEmail` realiza uma busca pela propriedade `email` da entidade.
+
+
+O parâmetro do método informa o valor utilizado na pesquisa.
+
+
+Também posso pesquisar por associações entre entidades, utilizando o atributo que representa o relacionamento.
+
+
+O tipo de retorno depende da quantidade de resultados esperados:
+
+- `Optional<T>`: utilizado quando espero um possível resultado.
+- `List<T>`: utilizado quando posso receber vários resultados.
+
+## 5. Service e injeção de dependência
+
+
+O Service é responsável por organizar as regras de negócio e coordenar as operações da aplicação.
+
+
+### @Service
+
+
+Identifica uma classe como componente da camada de serviços, permitindo que o Spring gerencie sua instância.
+
+
+### Injeção de dependência
+
+
+A injeção de dependência permite que o Spring forneça automaticamente os objetos necessários para uma classe.
+
+
+Uma forma comum de fazer isso é pela injeção por construtor.
+
+
+O construtor recebe a dependência como parâmetro e a atribui a um atributo da classe. Utilizar `private final` ajuda a garantir que essa dependência não seja substituída posteriormente.
+
+
+Quando existe apenas um construtor, não é necessário utilizar `@Autowired`.
+
+
+Assim, não preciso criar manualmente um Repository com `new`; o Spring fornece a implementação que ele gerencia.
+
+
+##  Arquitetura em camadas
+
+
+Uma forma comum de organizar aplicações Spring Boot é separar as responsabilidades:
+
+- **Controller:** recebe requisições HTTP e organiza as respostas.
+- **Service:** executa as regras de negócio.
+- **Repository:** realiza o acesso aos dados.
+- **Banco de dados:** armazena as informações.
+
+Essa divisão facilita a organização, manutenção e evolução da aplicação, evitando concentrar todas as responsabilidades em uma única classe.
 
