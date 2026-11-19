@@ -203,6 +203,9 @@ if (!this.tampada) { ... }
 ### **Métodos**
 
 
+_19/11/2026_
+
+
 Um método representa uma operação que pode ser executada dentro de uma classe. Pode receber parâmetros e retornar um resultado.
 
 
@@ -248,4 +251,7 @@ São estruturas utilizadas para representar resultados de formas diferentes.
 - `List<T>` representa uma coleção de elementos do mesmo tipo, permitindo trabalhar com vários resultados.
 
 A escolha depende do que espero receber de uma operação: um possível resultado ou uma coleção de resultados.
+
+
+---
 

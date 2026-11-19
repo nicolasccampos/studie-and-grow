@@ -199,3 +199,6 @@ Uma forma comum de organizar aplicações Spring Boot é separar as responsabili
 
 Essa divisão facilita a organização, manutenção e evolução da aplicação, evitando concentrar todas as responsabilidades em uma única classe.
 
+
+---
+
