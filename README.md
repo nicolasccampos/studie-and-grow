@@ -142,13 +142,6 @@ Se houver alterações nas notas, o workflow faz commit automático em `docs/not
 
 ---
 
-## Próximos passos
-
-- [ ] Publicar somente páginas marcadas com uma propriedade "Publicar" no Notion
-- [ ] Baixar imagens do Notion para o repositório, já que as URLs temporárias expiram
-
----
-
 ## Licença
 
 Projeto pessoal de estudos. Sinta-se à vontade para usar como referência.
