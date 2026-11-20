@@ -10,7 +10,7 @@ Caderno de estudos automatizado: escrevo as anotações no **Notion** e o conte�
 
 ## Motivação
 
-Quero registrar meus estudos em um lugar fácil de escrever e fácil de consultar. O Notion é ótimo para escrever, mas não publica. Este projeto faz essa ponte: escrevo no Notion e o site é atualizado sem copiar e colar nada manualmente.
+Quero registrar meus estudos em um lugar fácil de escrever e ter a facilidade de consultar meus conteúdos, de uma maneira online. O Notion é ótimo para escrever, mas não publica. Este projeto faz essa ponte: escrevo no Notion e o site, acessível para todos, é atualizado sem copiar e colar nada manualmente.
 
 ---
 
@@ -124,7 +124,7 @@ npm run docs:build
 ## Publicação
 
 1. Edite as páginas no Notion.
-2. Acesse a aba **Actions** do repositório.
+2. Acesse a aba no Github**Actions** do seu repositório.
 3. Clique em **Sincronizar Notion e Deploy do Site** > **Run workflow**.
 4. Aguarde o workflow ficar verde e confira o site.
 
@@ -134,8 +134,8 @@ Se houver alterações nas notas, o workflow faz commit automático em `docs/not
 
 ## Desafios resolvidos
 
-- **Caminho base do GitHub Pages:** o site fica em `/studie-and-grow/`, então foi preciso configurar a opção `base` do VitePress. Sem ela, CSS e rotas quebravam.
-- **`node_modules` versionado:** dependências foram enviadas por engano ao repositório. Resolvi com um `.gitignore` na raiz e removendo a pasta do rastreamento com `git rm -r --cached`.
+- **Caminho base do GitHub Pages:** o site fica em `/studie-and-grow/`, então foi preciso configurar a opção `base` do VitePress. Sem ela,o CSS e as rotas quebravam.
+- **`node_modules` versionado:** dependências foram enviadas por engano ao repositório. Consegui resolver com um `.gitignore` na raiz e removendo a pasta do rastreamento com `git rm -r --cached`.
 - **Conflitos de push:** o workflow fazia commits em `main` enquanto eu enviava alterações locais. Resolvi integrando o remoto com `git pull` e removendo arquivos gerados que não deveriam ser versionados.
 - **Erro na biblioteca do Notion:** a chamada `notion.databases.query` falhou em uma versão da biblioteca. Troquei por uma chamada direta à API REST com `fetch`, usando o cabeçalho `Notion-Version: 2022-06-28`.
 - **Organização do VitePress:** o build só funcionou depois que `.vitepress/` e as páginas foram movidos para dentro de `docs/`, a pasta de conteúdo do projeto.
