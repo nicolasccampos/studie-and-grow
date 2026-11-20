@@ -10,7 +10,9 @@ Caderno de estudos automatizado: escrevo as anotações no **Notion** e o conte�
 
 ## Motivação
 
-Quero registrar meus estudos em um lugar fácil de escrever e ter a facilidade de consultar meus conteúdos, de uma maneira online. O Notion é ótimo para escrever, mas não publica. Este projeto faz essa ponte: escrevo no Notion e o site, acessível para todos, é atualizado sem copiar e colar nada manualmente.
+Quero registrar meus estudos em um lugar fácil de escrever e ter a facilidade de consultar todos os meus conteúdos de forma online. O Notion é ótimo para escrever, mas não publica. 
+
+Este projeto faz essa ponte: escrevo no Notion e o site é atualizado sem copiar e colar nada manualmente. Assim alcanço meu objetivo principal, de ter conteúdos só meus publicados na Web para qualquer um ver e estudar.
 
 ---
 
