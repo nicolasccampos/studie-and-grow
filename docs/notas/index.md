@@ -13,6 +13,7 @@ PostgreSQL](./PostgreSQL.md)
 - [
 Testes de Software](./Testes-de-Software.md)
 - [BackEnd](./BackEnd.md)
+- [Certificações ](./Certificações.md)
 - [Cloud](./Cloud.md)
 - [FrontEnd](./FrontEnd.md)
 - [Git/GitHub](./GitGitHub.md)
