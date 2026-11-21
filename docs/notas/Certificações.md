@@ -4,10 +4,10 @@
 # AZ-900 — MICROSOFT AZURE
 
 
-# PARTE 1 — FUNDAMENTOS DA COMPUTAÇÃO EM NUVEM
+## PARTE 1 — FUNDAMENTOS DA COMPUTAÇÃO EM NUVEM
 
 
-## 1. O QUE É COMPUTAÇÃO EM NUVEM (CLOUD COMPUTING)?
+### 1. O QUE É COMPUTAÇÃO EM NUVEM (CLOUD COMPUTING)?
 
 
 Computação em nuvem é a disponibilização de recursos e serviços de tecnologia pela Internet, permitindo que empresas e usuários utilizem infraestrutura computacional sem precisar adquirir e manter todos os equipamentos fisicamente.
@@ -28,7 +28,7 @@ Esses recursos podem incluir:
 Em vez de comprar equipamentos, instalar servidores e construir um datacenter próprio, uma organização pode contratar esses recursos de um provedor de nuvem, como a Microsoft Azure.
 
 
-### 1.1. Como funciona na prática?
+1.1. Como funciona na prática?
 
 
 Imagine uma empresa que possui um sistema de vendas.
@@ -48,7 +48,7 @@ Tradicionalmente, a empresa precisaria adquirir equipamentos, configurar a infra
 Com a computação em nuvem, ela pode contratar os serviços necessários pela Internet e pagar conforme as condições do serviço contratado.
 
 
-### 1.2. Infraestrutura local x computação em nuvem
+1.2. Infraestrutura local x computação em nuvem
 
 
 **Infraestrutura local (On-premises):**
@@ -76,7 +76,7 @@ A empresa utiliza recursos disponibilizados por um provedor.
 O provedor administra a infraestrutura física, enquanto a empresa administra as partes do serviço que permanecem sob sua responsabilidade.
 
 
-### Comparação
+Comparação
 
 
 | Infraestrutura local                           | Computação em nuvem                                         |
@@ -91,7 +91,7 @@ O provedor administra a infraestrutura física, enquanto a empresa administra as
 **Importante:** utilizar a nuvem não significa que a empresa deixa de administrar seus sistemas, aplicações, dados e acessos.
 
 
-### 1.3. O que é um provedor de nuvem?
+1.3. O que é um provedor de nuvem?
 
 
 Um provedor de nuvem é uma empresa que disponibiliza serviços de computação, armazenamento, rede e outras tecnologias pela Internet.
@@ -106,7 +106,7 @@ Alguns dos principais provedores são:
 Essas empresas mantêm grandes infraestruturas de datacenters e disponibilizam recursos para clientes que desejam utilizar serviços de nuvem.
 
 
-### 1.4. Virtualização
+1.4. Virtualização
 
 
 Virtualização é uma tecnologia que permite criar representações virtuais de recursos computacionais físicos.
@@ -130,7 +130,7 @@ Uma empresa pode utilizar esse servidor para executar:
 Cada máquina virtual funciona como um ambiente computacional independente, embora compartilhe a infraestrutura física.
 
 
-### Por que a virtualização é importante para a nuvem?
+Por que a virtualização é importante para a nuvem?
 
 - Permite aproveitar melhor os recursos físicos;
 - Facilita a criação de ambientes computacionais;
@@ -144,7 +144,7 @@ Cada máquina virtual funciona como um ambiente computacional independente, embo
 ---
 
 
-## 2. MODELOS DE IMPLANTAÇÃO DA NUVEM
+### 2. MODELOS DE IMPLANTAÇÃO DA NUVEM
 
 
 Existem três modelos principais de implantação da computação em nuvem:
@@ -156,7 +156,7 @@ Existem três modelos principais de implantação da computação em nuvem:
 Cada modelo apresenta características diferentes de infraestrutura, controle e utilização.
 
 
-### 2.1. Nuvem pública (Public Cloud)
+2.1. Nuvem pública (Public Cloud)
 
 
 Na nuvem pública, os serviços são disponibilizados por um provedor de nuvem e compartilhados entre diferentes clientes em uma infraestrutura do provedor.
@@ -194,7 +194,7 @@ Ela contrata máquinas virtuais, banco de dados e armazenamento de um provedor d
 Assim, consegue executar seu sistema sem comprar todos os equipamentos.
 
 
-### 2.2. Nuvem privada (Private Cloud)
+2.2. Nuvem privada (Private Cloud)
 
 
 Na nuvem privada, a infraestrutura é destinada exclusivamente a uma organização.
@@ -217,7 +217,7 @@ Pode ser mantida pela própria empresa ou por um provedor contratado.
 Uma instituição possui requisitos específicos de controle e decide manter uma infraestrutura de nuvem privada destinada exclusivamente às suas operações.
 
 
-### 2.3. Nuvem híbrida (Hybrid Cloud)
+2.3. Nuvem híbrida (Hybrid Cloud)
 
 
 A nuvem híbrida combina ambientes de nuvem pública e privada ou infraestrutura local com serviços de nuvem pública.
@@ -235,7 +235,7 @@ Um banco mantém determinados sistemas e dados em sua infraestrutura privada, ma
 Outro exemplo seria uma empresa que mantém seu banco de dados localmente, mas hospeda sua aplicação web na Azure.
 
 
-### 2.4. Comparação dos modelos
+2.4. Comparação dos modelos
 
 
 | Característica          | Pública                                               | Privada                         | Híbrida                          |
@@ -247,7 +247,7 @@ Outro exemplo seria uma empresa que mantém seu banco de dados localmente, mas h
 | Exemplo                 | Aplicação hospedada na Azure                          | Nuvem exclusiva de uma empresa  | Banco local e aplicação na nuvem |
 
 
-### 2.5. Vantagens e limitações
+2.5. Vantagens e limitações
 
 
 **Nuvem pública**
@@ -296,7 +296,7 @@ Limitações:
 - Exige integração entre ambientes;
 - Requer atenção à segurança e à comunicação entre infraestruturas.
 
-### 2.6. Como identificar em uma questão?
+2.6. Como identificar em uma questão?
 
 
 **Situação 1:**
@@ -329,7 +329,7 @@ Resposta: nuvem híbrida.
 **Atenção:** não confunda nuvem pública com dados públicos. O modelo público diz respeito à infraestrutura disponibilizada pelo provedor, não significa que as informações armazenadas sejam abertas a qualquer pessoa.
 
 
-## 3. MODELOS DE DESPESAS: CAPEX E OPEX
+### 3. MODELOS DE DESPESAS: CAPEX E OPEX
 
 
 Ao trabalhar com infraestrutura de tecnologia, uma empresa precisa considerar os custos relacionados à aquisição, manutenção e utilização dos recursos.
@@ -340,7 +340,7 @@ Existem dois conceitos importantes:
 - CapEx;
 - OpEx.
 
-### 3.1. CapEx — Capital Expenditure (Despesas de Capital)
+3.1. CapEx — Capital Expenditure (Despesas de Capital)
 
 
 CapEx representa investimentos realizados na aquisição de bens e infraestrutura que serão utilizados por um período prolongado.
@@ -366,7 +366,7 @@ Para isso, precisa comprar servidores, equipamentos de rede, sistemas de refrige
 Esse investimento inicial representa CapEx.
 
 
-### Características do CapEx
+Características do CapEx
 
 - Exige investimento inicial;
 - Envolve aquisição de bens;
@@ -374,7 +374,7 @@ Esse investimento inicial representa CapEx.
 - A empresa assume os custos de manutenção;
 - A capacidade depende dos recursos adquiridos.
 
-### 3.2. OpEx — Operational Expenditure (Despesas Operacionais)
+3.2. OpEx — Operational Expenditure (Despesas Operacionais)
 
 
 OpEx representa despesas relacionadas à operação e utilização de produtos e serviços.
@@ -395,7 +395,7 @@ Em vez de comprar servidores, paga pelos serviços conforme o modelo de cobranç
 Esse tipo de despesa está relacionado ao OpEx.
 
 
-### Características do OpEx
+Características do OpEx
 
 - Pagamento relacionado à utilização ou contratação de serviços;
 - Menor necessidade de investimento inicial em equipamentos;
@@ -403,7 +403,7 @@ Esse tipo de despesa está relacionado ao OpEx.
 - Despesas operacionais;
 - Maior flexibilidade na contratação.
 
-### 3.3. Comparação entre CapEx e OpEx
+3.3. Comparação entre CapEx e OpEx
 
 
 | CapEx                                  | OpEx                                                   |
@@ -415,7 +415,7 @@ Esse tipo de despesa está relacionado ao OpEx.
 | Exemplo: comprar servidores            | Exemplo: contratar máquinas virtuais na nuvem          |
 
 
-### 3.4. Relação com a computação em nuvem
+3.4. Relação com a computação em nuvem
 
 
 A computação em nuvem permite que muitas empresas reduzam a necessidade de investimentos iniciais em infraestrutura física.
@@ -453,7 +453,7 @@ No segundo cenário, ela reduz a necessidade de comprar toda a infraestrutura f�
 - Compra de infraestrutura física: CapEx.
 - Contratação e utilização de serviços: OpEx.
 
-### 3.5. Como identificar na prova?
+3.5. Como identificar na prova?
 
 
 **Situação 1:**
@@ -486,7 +486,7 @@ Resposta: a computação em nuvem pode ajudar a reduzir a necessidade de CapEx.
 ---
 
 
-## 4. MODELO BASEADO NO CONSUMO (CONSUMPTION-BASED MODEL)
+### 4. MODELO BASEADO NO CONSUMO (CONSUMPTION-BASED MODEL)
 
 
 O modelo baseado no consumo permite que o cliente pague de acordo com a quantidade de recursos ou serviços utilizados, conforme as regras de cobrança do provedor.
@@ -495,7 +495,7 @@ O modelo baseado no consumo permite que o cliente pague de acordo com a quantida
 Esse modelo é uma das principais características da computação em nuvem.
 
 
-### 4.1. Como funciona?
+4.1. Como funciona?
 
 
 Imagine uma aplicação que utiliza:
@@ -517,7 +517,7 @@ A cobrança pode considerar diferentes fatores, como:
 Cada serviço possui suas próprias regras de cobrança.
 
 
-### 4.2. Exemplo prático
+4.2. Exemplo prático
 
 
 Uma empresa possui um sistema utilizado principalmente durante o horário comercial.
@@ -532,7 +532,7 @@ Se aumentar a utilização de determinado serviço, o custo pode aumentar confor
 Se reduzir a utilização, pode diminuir os custos, desde que também ajuste os recursos e as condições de contratação.
 
 
-### 4.3. Principais características
+4.3. Principais características
 
 - Pagamento relacionado ao consumo dos recursos;
 - Possibilidade de contratar serviços conforme a necessidade;
@@ -541,7 +541,7 @@ Se reduzir a utilização, pode diminuir os custos, desde que também ajuste os 
 - Flexibilidade para ajustar a capacidade;
 - Possibilidade de reduzir custos quando os recursos são corretamente dimensionados.
 
-### 4.4. Vantagens do modelo baseado no consumo
+4.4. Vantagens do modelo baseado no consumo
 
 
 **1. Flexibilidade**
@@ -568,7 +568,7 @@ A organização pode ajustar a capacidade dos recursos conforme o crescimento ou
 A empresa não precisa necessariamente comprar servidores e equipamentos para começar a utilizar os serviços.
 
 
-### 4.5. Relação entre consumo e escalabilidade
+4.5. Relação entre consumo e escalabilidade
 
 
 O modelo baseado no consumo pode trabalhar em conjunto com a escalabilidade.
@@ -586,7 +586,7 @@ Quando os recursos aumentam, os custos podem aumentar também. Quando são reduz
 Isso permite alinhar a capacidade computacional às necessidades da aplicação.
 
 
-### 4.6. Atenção: pagar pelo consumo não significa que tudo é gratuito quando não está sendo utilizado
+4.6. Atenção: pagar pelo consumo não significa que tudo é gratuito quando não está sendo utilizado
 
 
 Alguns recursos podem continuar gerando cobrança enquanto estiverem provisionados, mesmo que a aplicação não esteja recebendo usuários.
@@ -601,7 +601,7 @@ Além disso, determinados recursos de armazenamento e serviços possuem regras p
 Por isso, é importante monitorar os recursos e entender o modelo de cobrança de cada serviço.
 
 
-### 4.7. Ferramentas relacionadas ao controle de custos no Azure
+4.7. Ferramentas relacionadas ao controle de custos no Azure
 
 
 A Microsoft Azure disponibiliza ferramentas que ajudam as organizações a acompanhar e planejar seus gastos.
@@ -634,7 +634,7 @@ Permite estabelecer limites de orçamento e configurar alertas quando os gastos 
 Essas ferramentas serão estudadas com mais profundidade na parte de gerenciamento e governança.
 
 
-### 4.8. Comparação dos conceitos
+4.8. Comparação dos conceitos
 
 
 | Conceito                  | Significado                                    | Exemplo                                     |
@@ -647,7 +647,7 @@ Essas ferramentas serão estudadas com mais profundidade na parte de gerenciamen
 | Budgets                   | Definir orçamentos e alertas                   | Receber alerta ao atingir determinado gasto |
 
 
-### 4.9. Como identificar na prova?
+4.9. Como identificar na prova?
 
 
 **Situação 1:**
@@ -695,7 +695,7 @@ Uma empresa mantém uma máquina virtual provisionada e acredita que não haver�
 Resposta: afirmação incorreta. A cobrança depende das condições do serviço e do estado do recurso, não apenas da quantidade de usuários.
 
 
-## 5. Benefícios da computação em nuvem
+### 5. Benefícios da computação em nuvem
 
 
 A computação em nuvem oferece benefícios que ajudam empresas a executar aplicações, armazenar dados e administrar recursos de tecnologia com mais flexibilidade.
@@ -704,7 +704,7 @@ A computação em nuvem oferece benefícios que ajudam empresas a executar aplic
 Para a certificação AZ-900, é importante conhecer esses benefícios e, principalmente, saber diferenciá-los.
 
 
-### 5.1 Alta disponibilidade (High Availability)
+5.1 Alta disponibilidade (High Availability)
 
 
 Alta disponibilidade é a capacidade de um serviço permanecer acessível e funcionando durante o maior tempo possível.
@@ -722,7 +722,7 @@ Um sistema de uma empresa precisa ficar disponível para seus funcionários dura
 **Atenção:** alta disponibilidade não significa que um serviço nunca ficará fora do ar. Significa que sua arquitetura busca minimizar o tempo de indisponibilidade.
 
 
-### 5.2 Escalabilidade (Scalability)
+5.2 Escalabilidade (Scalability)
 
 
 Escalabilidade é a capacidade de aumentar ou diminuir os recursos de um sistema para atender às necessidades de processamento.
@@ -764,7 +764,7 @@ Exemplo:
 | Horizontal | Adiciona mais máquinas              | Mais servidores  |
 
 
-### 5.3 Elasticidade (Elasticity)
+5.3 Elasticidade (Elasticity)
 
 
 Elasticidade é a capacidade de ajustar os recursos automaticamente ou rapidamente conforme a demanda.
@@ -784,7 +784,7 @@ Uma loja virtual recebe muitos acessos durante uma promoção. A infraestrutura 
 Atenção: os conceitos são relacionados, mas não são sinônimos.
 
 
-### 5.4 Confiabilidade (Reliability)
+5.4 Confiabilidade (Reliability)
 
 
 Confiabilidade é a capacidade de um sistema funcionar corretamente e de maneira consistente ao longo do tempo.
@@ -799,7 +799,7 @@ Exemplo:
 Uma aplicação utiliza componentes distribuídos para reduzir a dependência de um único equipamento.
 
 
-### 5.5 Previsibilidade (Predictability)
+5.5 Previsibilidade (Predictability)
 
 
 Previsibilidade é a capacidade de estimar o comportamento e os custos de uma infraestrutura.
@@ -816,7 +816,7 @@ Exemplo:
 Uma empresa acompanha seu consumo de armazenamento e processamento para planejar o orçamento dos próximos meses.
 
 
-### 5.6 Segurança (Security)
+5.6 Segurança (Security)
 
 
 A nuvem oferece recursos e ferramentas para proteger aplicações, dados e infraestrutura.
@@ -840,7 +840,7 @@ Uma empresa pode configurar permissões para que somente funcionários autorizad
 Importante: utilizar a nuvem não significa que toda a segurança será responsabilidade do provedor. A responsabilidade é compartilhada entre o provedor e o cliente, dependendo do modelo de serviço contratado.
 
 
-### 5.7 Governança (Governance)
+5.7 Governança (Governance)
 
 
 Governança é o conjunto de regras, políticas e processos utilizados para controlar e organizar os recursos de tecnologia.
@@ -855,7 +855,7 @@ Exemplo:
 Uma empresa estabelece regras para limitar a criação de recursos em determinadas regiões e controlar os gastos dos departamentos.
 
 
-### 5.8 Gerenciabilidade (Manageability)
+5.8 Gerenciabilidade (Manageability)
 
 
 Gerenciabilidade é a facilidade de administrar, configurar, monitorar e controlar os recursos de uma infraestrutura.
@@ -875,7 +875,7 @@ Exemplo:
 Um administrador utiliza o portal do Azure para acompanhar máquinas virtuais, verificar configurações e administrar recursos.
 
 
-### 5.9 Resumo dos benefícios
+5.9 Resumo dos benefícios
 
 
 | Benefício            | Significado principal                                |
@@ -890,7 +890,7 @@ Um administrador utiliza o portal do Azure para acompanhar máquinas virtuais, v
 | Gerenciabilidade     | Administrar e monitorar recursos                     |
 
 
-### 5.10 Como isso pode aparecer na prova?
+5.10 Como isso pode aparecer na prova?
 
 - Se a questão falar sobre aumentar a memória de um servidor, pense em escalabilidade vertical.
 - Se falar sobre adicionar mais servidores, pense em escalabilidade horizontal.
@@ -906,13 +906,13 @@ Um administrador utiliza o portal do Azure para acompanhar máquinas virtuais, v
 ---
 
 
-## 6. Disponibilidade, SLA, tolerância a falhas e recuperação
+### 6. Disponibilidade, SLA, tolerância a falhas e recuperação
 
 
 Além de conhecer os benefícios da nuvem, é importante entender como os serviços lidam com interrupções, falhas e perda de dados.
 
 
-### 6.1 SLA — Service Level Agreement
+6.1 SLA — Service Level Agreement
 
 
 SLA significa _Service Level Agreement_, ou Acordo de Nível de Serviço.
@@ -957,7 +957,7 @@ Esses valores são aproximações matemáticas considerando um ano de 365 dias. 
 **Atenção para a prova:** um SLA de 99,99% representa um compromisso de disponibilidade maior que um SLA de 99,9%.
 
 
-### 6.2 Tolerância a falhas (Fault Tolerance)
+6.2 Tolerância a falhas (Fault Tolerance)
 
 
 Tolerância a falhas é a capacidade de um sistema continuar funcionando mesmo quando um de seus componentes apresenta uma falha.
@@ -975,7 +975,7 @@ Uma aplicação possui componentes redundantes. Se um deles apresentar uma falha
 **Ideia principal:** o sistema continua funcionando mesmo diante de uma falha.
 
 
-### 6.3 Recuperação de desastres (Disaster Recovery)
+6.3 Recuperação de desastres (Disaster Recovery)
 
 
 Recuperação de desastres é o conjunto de estratégias e procedimentos utilizados para restaurar sistemas e serviços após uma interrupção grave.
@@ -997,7 +997,7 @@ Uma empresa mantém uma estratégia de recuperação que permite restaurar seus 
 **Ideia principal:** recuperar os serviços depois de um evento grave.
 
 
-### 6.4 Backup (Cópia de segurança)
+6.4 Backup (Cópia de segurança)
 
 
 Backup é uma cópia dos dados utilizada para possibilitar sua recuperação caso os dados originais sejam perdidos, danificados ou alterados indevidamente.
@@ -1016,7 +1016,7 @@ O backup é importante para proteger os dados contra situações como:
 - Falhas de equipamentos.
 - Incidentes que comprometam as informações.
 
-### 6.5 Redundância (Redundancy)
+6.5 Redundância (Redundancy)
 
 
 Redundância é a utilização de componentes ou recursos adicionais para evitar que a falha de um único elemento interrompa um serviço.
@@ -1040,7 +1040,7 @@ Uma empresa mantém dois componentes capazes de realizar a mesma função. Se um
 Importante: redundância não substitui backup. Se uma exclusão ou corrupção de dados for replicada, a redundância pode não permitir recuperar a versão anterior.
 
 
-### 6.6 Latência (Latency)
+6.6 Latência (Latency)
 
 
 Latência é o tempo necessário para que os dados sejam transmitidos entre dois pontos de uma rede.
@@ -1066,7 +1066,7 @@ Uma aplicação hospedada em uma região geograficamente distante de seus usuár
 Por isso, escolher uma região adequada para hospedar recursos pode influenciar a experiência dos usuários.
 
 
-### 6.7 Diferenças que você precisa dominar
+6.7 Diferenças que você precisa dominar
 
 
 | Conceito                 | Pergunta que ajuda a identificar                    |
@@ -1080,7 +1080,7 @@ Por isso, escolher uma região adequada para hospedar recursos pode influenciar 
 | Latência                 | Quanto tempo os dados levam para chegar ao destino? |
 
 
-### 6.8 Como isso pode aparecer na prova?
+6.8 Como isso pode aparecer na prova?
 
 - Se a questão apresentar um compromisso percentual de disponibilidade, pense em SLA.
 - Se o sistema continuar funcionando mesmo após a falha de um componente, pense em tolerância a falhas.
@@ -1092,7 +1092,7 @@ Por isso, escolher uma região adequada para hospedar recursos pode influenciar 
 **Anotação para guardar:** backup protege a recuperação dos dados; redundância ajuda a manter o funcionamento; recuperação de desastres trata da restauração dos serviços após uma interrupção grave.
 
 
-## 7. Modelos de serviço em nuvem: IaaS, PaaS e SaaS
+### 7. Modelos de serviço em nuvem: IaaS, PaaS e SaaS
 
 
 Os modelos de serviço em nuvem definem o nível de gerenciamento oferecido pelo provedor e o nível de responsabilidade que permanece com o cliente.
@@ -1107,7 +1107,7 @@ Os três principais modelos são:
 A principal diferença entre eles está na quantidade de infraestrutura que o cliente precisa administrar.
 
 
-### 7.1 IaaS — Infrastructure as a Service
+7.1 IaaS — Infrastructure as a Service
 
 
 IaaS significa Infraestrutura como Serviço.
@@ -1142,7 +1142,7 @@ A empresa ainda precisa configurar e administrar o sistema operacional e os prog
 Quando a empresa precisa de maior controle sobre o ambiente, como configurar o sistema operacional ou instalar softwares específicos.
 
 
-### 7.2 PaaS — Platform as a Service
+7.2 PaaS — Platform as a Service
 
 
 PaaS significa Plataforma como Serviço.
@@ -1170,7 +1170,7 @@ Um desenvolvedor precisa publicar uma aplicação web. Em vez de configurar um s
 Quando a empresa deseja desenvolver e publicar aplicações sem precisar administrar diretamente a infraestrutura e o sistema operacional.
 
 
-### 7.3 SaaS — Software as a Service
+7.3 SaaS — Software as a Service
 
 
 SaaS significa Software como Serviço.
@@ -1203,7 +1203,7 @@ Uma empresa utiliza um serviço de e-mail acessado pelo navegador, sem precisar 
 Quando o usuário ou a empresa deseja utilizar um software pronto, sem precisar desenvolver ou administrar sua infraestrutura.
 
 
-### 7.4 Comparação entre IaaS, PaaS e SaaS
+7.4 Comparação entre IaaS, PaaS e SaaS
 
 
 | Característica         | IaaS               | PaaS                          | SaaS                   |
@@ -1218,7 +1218,7 @@ Quando o usuário ou a empresa deseja utilizar um software pronto, sem precisar 
 A tabela apresenta uma visão simplificada. As responsabilidades exatas dependem do serviço e de sua configuração.
 
 
-### 7.5 Entendendo a diferença com um exemplo
+7.5 Entendendo a diferença com um exemplo
 
 
 Imagine que três empresas precisam utilizar um sistema de vendas.
@@ -1251,7 +1251,7 @@ Contrata um sistema de vendas pronto, acessado pela internet.
 Não precisa desenvolver ou administrar a infraestrutura que mantém o software funcionando.
 
 
-### 7.6 Como memorizar?
+7.6 Como memorizar?
 
 - IaaS: infraestrutura pronta para você administrar.
 - PaaS: plataforma pronta para você desenvolver e executar aplicações.
@@ -1269,7 +1269,7 @@ Uma forma de lembrar:
 **SaaS = utilizar aplicações.**
 
 
-### 7.7 Como isso pode aparecer na prova?
+7.7 Como isso pode aparecer na prova?
 
 - Se a questão falar sobre contratar uma máquina virtual e administrar o sistema operacional, pense em IaaS.
 - Se falar sobre desenvolver e publicar aplicações sem administrar servidores e sistema operacional, pense em PaaS.
@@ -1284,7 +1284,7 @@ Uma forma de lembrar:
 ---
 
 
-## 8. Modelo de responsabilidade compartilhada (Shared Responsibility Model)
+### 8. Modelo de responsabilidade compartilhada (Shared Responsibility Model)
 
 
 O modelo de responsabilidade compartilhada define como as responsabilidades pela segurança e pelo gerenciamento são divididas entre o provedor de nuvem e o cliente.
@@ -1296,7 +1296,7 @@ No Azure, por exemplo, a Microsoft é responsável por proteger a infraestrutura
 **Ideia principal:** utilizar a nuvem não significa transferir todas as responsabilidades de segurança para o provedor.
 
 
-### 8.1 Responsabilidades do provedor
+8.1 Responsabilidades do provedor
 
 
 O provedor de nuvem é responsável por proteger e manter os elementos da infraestrutura que oferece.
@@ -1317,7 +1317,7 @@ Entre suas responsabilidades estão:
 A Microsoft é responsável pela segurança física dos datacenters do Azure, incluindo os controles de acesso às instalações.
 
 
-### 8.2 Responsabilidades do cliente
+8.2 Responsabilidades do cliente
 
 
 O cliente continua responsável por proteger e administrar os elementos que estão sob seu controle.
@@ -1339,7 +1339,7 @@ Dependendo do modelo de serviço, isso pode incluir:
 Uma empresa utiliza o Azure para armazenar documentos. A Microsoft protege a infraestrutura, mas a empresa precisa configurar corretamente quem pode acessar esses documentos.
 
 
-### 8.3 Como a responsabilidade muda entre IaaS, PaaS e SaaS?
+8.3 Como a responsabilidade muda entre IaaS, PaaS e SaaS?
 
 
 A divisão de responsabilidades depende do modelo de serviço.
@@ -1363,7 +1363,7 @@ O provedor assume mais responsabilidades, incluindo a administração do sistema
 O provedor administra uma parcela ainda maior do ambiente, incluindo a aplicação. O cliente continua responsável por aspectos como seus dados, identidades, acessos e configurações disponíveis no serviço.
 
 
-### 8.4 Comparação geral
+8.4 Comparação geral
 
 
 | Responsabilidade              | IaaS     | PaaS     | SaaS     |
@@ -1380,7 +1380,7 @@ O provedor administra uma parcela ainda maior do ambiente, incluindo a aplicaç�
 Essa é uma representação simplificada para estudo. Algumas responsabilidades podem variar conforme o serviço, a configuração e os recursos contratados.
 
 
-### 8.5 Exemplo prático
+8.5 Exemplo prático
 
 
 Imagine que uma empresa utiliza uma máquina virtual no Azure para armazenar e processar informações.
@@ -1403,7 +1403,7 @@ A empresa é responsável por:
 Se a empresa configurar permissões incorretamente e permitir que pessoas não autorizadas acessem seus dados, isso não significa necessariamente que o provedor falhou em proteger a infraestrutura.
 
 
-### 8.6 Relação com segurança e identidade
+8.6 Relação com segurança e identidade
 
 
 O cliente precisa controlar quem pode acessar seus recursos.
@@ -1423,7 +1423,7 @@ Ele oferece recursos relacionados a:
 Outro conceito importante é o princípio do menor privilégio: cada usuário deve receber somente as permissões necessárias para executar suas atividades.
 
 
-### 8.7 Como isso pode aparecer na prova?
+8.7 Como isso pode aparecer na prova?
 
 - Se a questão perguntar quem protege fisicamente os datacenters, a responsabilidade é do provedor.
 - Se perguntar quem administra os usuários e as permissões de acesso da organização, pense no cliente.
@@ -1435,10 +1435,10 @@ Outro conceito importante é o princípio do menor privilégio: cada usuário de
 **Anotação para guardar:** o provedor protege a infraestrutura que oferece, mas o cliente continua responsável por proteger seus dados, identidades, acessos e configurações sob seu controle.
 
 
-## 9. Serverless e Azure Functions
+### 9. Serverless e Azure Functions
 
 
-### 9.1 O que é Serverless?
+9.1 O que é Serverless?
 
 
 Serverless significa, literalmente, “sem servidor”.
@@ -1453,7 +1453,7 @@ Serverless significa, literalmente, “sem servidor”.
 O desenvolvedor pode se concentrar na criação e execução do código, enquanto o provedor administra a infraestrutura necessária.
 
 
-### 9.2 Como funciona?
+9.2 Como funciona?
 
 
 Em uma aplicação tradicional, a equipe pode precisar:
@@ -1470,7 +1470,7 @@ Em uma arquitetura Serverless, grande parte desse gerenciamento é abstraída pe
 O código pode ser executado quando determinado evento acontece, sem que o desenvolvedor precise manter um servidor próprio permanentemente disponível.
 
 
-### 9.3 Azure Functions
+9.3 Azure Functions
 
 
 O Azure Functions é um serviço de computação Serverless do Microsoft Azure.
@@ -1498,7 +1498,7 @@ Outros exemplos:
 - Executar uma tarefa em horários programados.
 - Responder a eventos de outros serviços do Azure.
 
-### 9.4 Triggers (Gatilhos)
+9.4 Triggers (Gatilhos)
 
 
 Triggers são os gatilhos que determinam quando uma Azure Function será executada.
@@ -1520,7 +1520,7 @@ Uma empresa deseja executar uma tarefa todos os dias às 8 horas.
 Pode utilizar uma Azure Function com Timer Trigger para iniciar essa execução automaticamente.
 
 
-### 9.5 Vantagens do Serverless
+9.5 Vantagens do Serverless
 
 - Menor necessidade de administrar servidores.
 - Maior foco no desenvolvimento do código.
@@ -1528,7 +1528,7 @@ Pode utilizar uma Azure Function com Timer Trigger para iniciar essa execução 
 - Escalabilidade gerenciada pelo provedor, conforme o plano e a configuração.
 - Pagamento baseado no modelo de cobrança do serviço e no consumo, conforme suas condições.
 
-### 9.6 Serverless é sempre a melhor escolha?
+9.6 Serverless é sempre a melhor escolha?
 
 
 Não necessariamente.
@@ -1546,7 +1546,7 @@ Não necessariamente.
 Uma aplicação que precisa de controle específico sobre o sistema operacional, por exemplo, pode exigir outro modelo de computação.
 
 
-### 9.7 Comparação: máquina virtual e Azure Functions
+9.7 Comparação: máquina virtual e Azure Functions
 
 
 | Característica              | Máquina Virtual                                | Azure Functions                           |
@@ -1557,7 +1557,7 @@ Uma aplicação que precisa de controle específico sobre o sistema operacional,
 | Principal utilização        | Aplicações que precisam de ambiente controlado | Execução de funções e tarefas específicas |
 
 
-### 9.8 Como isso pode aparecer na prova?
+9.8 Como isso pode aparecer na prova?
 
 - Se a questão falar sobre executar código sem administrar servidores, pense em Serverless.
 - Se falar sobre executar código quando um evento acontece, pense em Azure Functions.
@@ -1571,13 +1571,13 @@ Uma aplicação que precisa de controle específico sobre o sistema operacional,
 ---
 
 
-## 10. Revisão geral da Parte 1 — Fundamentos de Cloud Computing
+### 10. Revisão geral da Parte 1 — Fundamentos de Cloud Computing
 
 
 Esta seção reúne os conceitos estudados na Parte 1. A ideia é revisar as diferenças que podem aparecer em questões de múltipla escolha.
 
 
-### 10.1 Conceitos fundamentais
+10.1 Conceitos fundamentais
 
 
 | Conceito          | Definição                                                              |
@@ -1591,7 +1591,7 @@ Esta seção reúne os conceitos estudados na Parte 1. A ideia é revisar as dif
 | Nuvem híbrida     | Combinação de ambientes de nuvem pública e privada                     |
 
 
-### 10.2 Custos e consumo
+10.2 Custos e consumo
 
 
 | Conceito            | Definição                                                             |
@@ -1607,7 +1607,7 @@ Esta seção reúne os conceitos estudados na Parte 1. A ideia é revisar as dif
 - Pagar mensalmente por serviços de nuvem representa normalmente OpEx.
 - A nuvem permite reduzir a necessidade de grandes investimentos iniciais, mas exige controle dos gastos.
 
-### 10.3 Benefícios da nuvem
+10.3 Benefícios da nuvem
 
 
 | Conceito                  | Significado                                 |
@@ -1623,7 +1623,7 @@ Esta seção reúne os conceitos estudados na Parte 1. A ideia é revisar as dif
 | Gerenciabilidade          | Administrar e monitorar recursos            |
 
 
-### 10.4 Disponibilidade e recuperação
+10.4 Disponibilidade e recuperação
 
 
 | Conceito                 | Significado                                                        |
@@ -1636,7 +1636,7 @@ Esta seção reúne os conceitos estudados na Parte 1. A ideia é revisar as dif
 | Latência                 | Tempo de comunicação entre pontos de uma rede                      |
 
 
-### 10.5 Modelos de serviço
+10.5 Modelos de serviço
 
 
 | Modelo | O que oferece               | Exemplo                |
@@ -1652,7 +1652,7 @@ Esta seção reúne os conceitos estudados na Parte 1. A ideia é revisar as dif
 - PaaS: foco no desenvolvimento de aplicações.
 - SaaS: utilização de um software pronto.
 
-### 10.6 Responsabilidade compartilhada
+10.6 Responsabilidade compartilhada
 
 - O provedor é responsável pela infraestrutura física e pelos componentes que administra.
 - O cliente é responsável pelos dados, identidades, acessos e configurações sob seu controle.
@@ -1660,7 +1660,7 @@ Esta seção reúne os conceitos estudados na Parte 1. A ideia é revisar as dif
 - Em PaaS, o provedor assume mais responsabilidades.
 - Em SaaS, o provedor administra uma parcela maior do ambiente.
 
-### 10.7 Serverless
+10.7 Serverless
 
 
 | Conceito        | Significado                                                                   |
@@ -1675,7 +1675,7 @@ Esta seção reúne os conceitos estudados na Parte 1. A ideia é revisar as dif
 ---
 
 
-### 10.8 Exercícios de revisão
+10.8 Exercícios de revisão
 
 
 Tente responder sem consultar os tópicos anteriores. As questões abaixo são autorais, no estilo de revisão para certificação.
@@ -1885,7 +1885,7 @@ D) SaaS.
 ---
 
 
-### 10.9 Gabarito comentado
+10.9 Gabarito comentado
 
 1. **B — Escalabilidade vertical.** A capacidade de uma máquina existente está sendo aumentada.
 2. **C — Elasticidade.** Os recursos são ajustados conforme a demanda.
@@ -1901,7 +1901,7 @@ D) SaaS.
 ---
 
 
-### 10.10 Checklist de aprendizagem
+10.10 Checklist de aprendizagem
 
 
 Antes de avançar para a próxima parte, verifique se consegue explicar cada conceito sem consultar o material.
@@ -1925,8 +1925,448 @@ Antes de avançar para a próxima parte, verifique se consegue explicar cada con
 **Conclusão da Parte 1:** você deve conseguir reconhecer os conceitos de computação em nuvem, comparar seus modelos e identificar qual solução atende a cada situação apresentada em uma questão.
 
 
-Parte 1 concluída
+---
 
 
-Quando quiser, seguimos para a Parte 2 — Arquitetura e serviços do Azure, começando pelos componentes de arquitetura: regiões, zonas de disponibilidade, pares de regiões, recursos, grupos de recursos, assinaturas e grupos de gerenciamento.
+## PARTE 2 — ARQUITETURA E SERVIÇOS DO AZURE
 
+
+### 1. Organização física do Azure: regiões, datacenters e zonas de disponibilidade
+
+
+O Microsoft Azure possui uma infraestrutura global formada por datacenters distribuídos geograficamente.
+
+
+Para compreender sua arquitetura, precisamos conhecer quatro conceitos principais:
+
+- Datacenters.
+- Regiões.
+- Zonas de disponibilidade.
+- Pares de regiões e regiões soberanas.
+
+1.1 Datacenters (Centros de dados)
+
+
+Um datacenter é uma instalação física que abriga equipamentos utilizados para fornecer serviços de tecnologia.
+
+
+Entre seus componentes estão:
+
+- Servidores.
+- Equipamentos de rede.
+- Sistemas de armazenamento.
+- Sistemas de energia.
+- Sistemas de refrigeração.
+- Controles de segurança física.
+
+**Exemplo:**
+
+
+Quando uma empresa cria uma máquina virtual no Azure, ela está utilizando recursos de infraestrutura hospedados em datacenters da Microsoft.
+
+
+O cliente não precisa possuir ou administrar fisicamente esses equipamentos.
+
+
+1.2 Regiões do Azure (Azure Regions)
+
+
+Uma região é uma área geográfica do mundo que contém um ou mais datacenters próximos.
+
+
+Ao criar um recurso no Azure, normalmente é necessário escolher uma região compatível com aquele serviço.
+
+
+A escolha pode considerar:
+
+- Proximidade dos usuários.
+- Latência.
+- Requisitos de residência dos dados.
+- Disponibilidade dos serviços.
+- Necessidades de conformidade.
+- Custos.
+
+**Exemplo:**
+
+
+Uma empresa brasileira possui usuários principalmente no Brasil e deseja hospedar uma aplicação próxima deles.
+
+
+Ela pode avaliar uma região do Azure localizada no Brasil, considerando também os serviços disponíveis e os requisitos da aplicação.
+
+
+**Atenção:** escolher uma região próxima pode ajudar a reduzir a latência, mas não garante automaticamente o melhor desempenho. A rede, a arquitetura e outros fatores também influenciam.
+
+
+1.3 Zonas de disponibilidade (Availability Zones)
+
+
+As zonas de disponibilidade são grupos de datacenters fisicamente separados dentro de uma mesma região do Azure.
+
+
+Cada zona possui infraestrutura independente, incluindo:
+
+- Alimentação elétrica.
+- Sistemas de refrigeração.
+- Rede.
+
+O objetivo é reduzir o impacto de falhas que afetem um datacenter ou uma zona específica.
+
+
+**Exemplo:**
+
+
+Uma empresa distribui sua aplicação entre diferentes zonas de disponibilidade de uma região.
+
+
+Se uma zona apresentar uma falha, os recursos posicionados em outra zona poderão continuar funcionando, dependendo da arquitetura e da configuração da aplicação.
+
+
+**Atenção:** zonas de disponibilidade ficam dentro de uma mesma região. Não são a mesma coisa que regiões diferentes.
+
+
+1.4 Pares de regiões (Region Pairs)
+
+
+Pares de regiões são associações entre determinadas regiões do Azure que podem apoiar estratégias de continuidade e recuperação.
+
+
+Eles foram projetados para oferecer benefícios como:
+
+- Separação geográfica entre regiões.
+- Apoio a estratégias de recuperação de desastres.
+- Distribuição planejada de atualizações para determinados serviços.
+- Possibilidade de replicação para alguns serviços.
+
+**Exemplo:**
+
+
+Uma empresa mantém sua aplicação em uma região principal e planeja uma estratégia de recuperação utilizando outra região.
+
+
+Caso ocorra uma interrupção grave na região principal, a empresa poderá utilizar a região alternativa, desde que tenha preparado os recursos necessários.
+
+
+**Atenção importante:** não significa que todos os serviços replicam automaticamente seus dados para a região pareada. É necessário verificar as características de cada serviço e configurar a estratégia de continuidade.
+
+
+1.5 Diferença entre zonas de disponibilidade e pares de regiões
+
+
+| Característica        | Zonas de disponibilidade             | Pares de regiões                           |
+| --------------------- | ------------------------------------ | ------------------------------------------ |
+| Localização           | Dentro da mesma região               | Regiões geográficas distintas              |
+| Separação             | Física, entre datacenters            | Geográfica, entre regiões                  |
+| Principal objetivo    | Reduzir impacto de falhas locais     | Apoiar continuidade e recuperação regional |
+| Replicação automática | Depende do serviço e da configuração | Depende do serviço e da configuração       |
+
+
+**Como memorizar:**
+
+- Zona de disponibilidade = proteção dentro de uma região.
+- Par de regiões = relação entre regiões diferentes.
+
+1.6 Regiões soberanas (Sovereign Regions)
+
+
+Regiões soberanas são ambientes de nuvem separados, desenvolvidos para atender requisitos específicos de isolamento, operação, segurança e conformidade.
+
+
+Podem atender organizações que possuem exigências governamentais ou regulatórias especiais.
+
+
+**Exemplo:**
+
+
+O Azure Government é uma instância separada do Azure, destinada a atender necessidades de órgãos governamentais dos Estados Unidos e seus fornecedores autorizados.
+
+
+**Atenção:** regiões soberanas não são simplesmente regiões comuns localizadas em outro país. Elas possuem características específicas de operação e isolamento.
+
+
+1.7 Comparação geral
+
+
+| Conceito                | O que representa?                                                      |
+| ----------------------- | ---------------------------------------------------------------------- |
+| Datacenter              | Instalação física com equipamentos de TI                               |
+| Região                  | Área geográfica com um ou mais datacenters                             |
+| Zona de disponibilidade | Grupo de datacenters fisicamente separados dentro de uma região        |
+| Par de regiões          | Associação entre regiões distintas                                     |
+| Região soberana         | Ambiente separado para requisitos específicos de isolamento e operação |
+
+
+1.8 Como isso pode aparecer na prova?
+
+- Se a questão falar sobre uma instalação física com servidores e equipamentos, pense em datacenter.
+- Se falar sobre uma área geográfica que reúne datacenters, pense em região.
+- Se falar sobre datacenters fisicamente separados dentro da mesma região, pense em zonas de disponibilidade.
+- Se falar sobre continuidade entre regiões geográficas diferentes, pense em pares de regiões.
+- Se falar sobre ambientes isolados para atender exigências governamentais específicas, pense em regiões soberanas.
+- Se a questão afirmar que todos os serviços replicam automaticamente para a região pareada, desconfie.
+
+**Anotação para guardar:** zonas de disponibilidade ajudam a proteger contra falhas dentro de uma região; pares de regiões apoiam estratégias de recuperação entre regiões distintas.
+
+
+---
+
+
+### 2. Organização lógica do Azure: recursos, grupos de recursos, assinaturas e grupos de gerenciamento
+
+
+Além da organização física, o Azure possui uma estrutura lógica para organizar, administrar e controlar os recursos utilizados pelas organizações.
+
+
+Essa estrutura é importante para:
+
+- Organizar serviços.
+- Controlar permissões.
+- Administrar recursos.
+- Aplicar políticas.
+- Organizar cobranças.
+- Facilitar a governança.
+
+Os principais elementos são:
+
+1. Recursos.
+2. Grupos de recursos.
+3. Assinaturas.
+4. Grupos de gerenciamento.
+
+2.1 Recursos (Resources)
+
+
+Um recurso é uma instância de um serviço criada e administrada no Azure.
+
+
+Exemplos:
+
+- Máquina virtual.
+- Conta de armazenamento.
+- Banco de dados.
+- Rede virtual.
+- Aplicação web.
+
+**Exemplo:**
+
+
+Uma empresa cria uma máquina virtual para hospedar seu sistema e uma conta de armazenamento para guardar arquivos.
+
+
+A máquina virtual e a conta de armazenamento são dois recursos diferentes.
+
+
+2.2 Grupos de recursos (Resource Groups)
+
+
+Um grupo de recursos é um contêiner lógico utilizado para reunir recursos relacionados.
+
+
+Ele facilita a administração de recursos que pertencem a uma mesma solução ou projeto.
+
+
+**Exemplo:**
+
+
+Uma empresa desenvolve um sistema de matrículas e cria um grupo de recursos chamado `rg-matriculas`.
+
+
+Dentro dele, pode organizar:
+
+- Uma máquina virtual.
+- Uma conta de armazenamento.
+- Uma rede virtual.
+- Um banco de dados.
+
+Isso facilita localizar e administrar os componentes relacionados ao sistema.
+
+
+**Regras importantes:**
+
+- Um recurso pertence a apenas um grupo de recursos por vez.
+- Um grupo de recursos pertence a uma assinatura.
+- Recursos de um mesmo grupo podem estar em regiões diferentes, dependendo do serviço.
+- A localização do grupo de recursos está relacionada aos seus metadados, não significa que todos os recursos estejam fisicamente naquela região.
+
+**Atenção:** um grupo de recursos não é uma rede e não obriga todos os recursos a ficarem fisicamente juntos.
+
+
+2.3 Assinaturas (Subscriptions)
+
+
+Uma assinatura do Azure é um escopo utilizado para organizar recursos, controlar acesso e acompanhar cobranças.
+
+
+Ela funciona como uma divisão administrativa e financeira dentro do ambiente Azure.
+
+
+Uma organização pode utilizar diferentes assinaturas para separar:
+
+- Departamentos.
+- Projetos.
+- Ambientes de desenvolvimento e produção.
+- Equipes.
+- Centros de custos.
+
+**Exemplo:**
+
+
+Uma empresa possui dois departamentos:
+
+- Departamento acadêmico.
+- Departamento administrativo.
+
+Ela pode utilizar assinaturas diferentes para organizar os recursos e facilitar o controle de custos e permissões de cada departamento.
+
+
+**Atenção:** uma assinatura não é simplesmente uma conta de usuário. Ela é um escopo de gerenciamento e cobrança.
+
+
+2.4 Grupos de gerenciamento (Management Groups)
+
+
+Os grupos de gerenciamento permitem organizar várias assinaturas em uma estrutura hierárquica.
+
+
+Eles são utilizados principalmente para aplicar governança em um nível superior.
+
+
+Isso permite que determinadas políticas e configurações sejam aplicadas a várias assinaturas.
+
+
+**Exemplo:**
+
+
+Uma organização possui cinco assinaturas e deseja estabelecer uma regra de segurança comum para todas elas.
+
+
+Em vez de configurar a regra individualmente em cada assinatura, pode utilizar um grupo de gerenciamento para organizar e aplicar a governança em um escopo superior, conforme os recursos e as regras utilizadas.
+
+
+2.5 Entendendo a hierarquia do Azure
+
+
+A estrutura lógica pode ser representada assim:
+
+
+**Grupo de gerenciamento**
+
+
+↓ organiza várias assinaturas
+
+
+**Assinaturas**
+
+
+↓ contêm grupos de recursos
+
+
+**Grupos de recursos**
+
+
+↓ organizam recursos
+
+
+**Recursos**
+
+
+Essa hierarquia ajuda a compreender onde cada elemento se encaixa.
+
+
+2.6 Exemplo completo
+
+
+Imagine uma escola chamada Horizonte que utiliza o Azure para administrar seus sistemas.
+
+
+A escola possui dois departamentos:
+
+- Acadêmico.
+- Administrativo.
+
+A organização pode criar a seguinte estrutura:
+
+
+**Grupo de gerenciamento: Escola Horizonte**
+
+
+Dentro dele:
+
+
+**Assinatura 1 — Acadêmico**
+
+- Grupo de recursos: `rg-matriculas`
+    - Máquina virtual.
+    - Banco de dados.
+    - Rede virtual.
+- Grupo de recursos: `rg-biblioteca`
+    - Conta de armazenamento.
+    - Aplicação web.
+
+**Assinatura 2 — Administrativo**
+
+- Grupo de recursos: `rg-financeiro`
+    - Banco de dados.
+    - Aplicação financeira.
+    - Conta de armazenamento.
+
+Assim, a escola consegue organizar seus recursos por departamento e aplicar regras de governança em um nível superior.
+
+
+2.7 Comparação entre os quatro elementos
+
+
+| Elemento               | Função principal                                    |
+| ---------------------- | --------------------------------------------------- |
+| Recurso                | Representa um serviço criado no Azure               |
+| Grupo de recursos      | Reúne recursos relacionados                         |
+| Assinatura             | Organiza recursos, acesso e cobrança                |
+| Grupo de gerenciamento | Organiza assinaturas e permite governança em escala |
+
+
+2.8 Diferenças que merecem atenção
+
+
+**Grupo de recursos x Assinatura**
+
+- Grupo de recursos: organiza recursos relacionados.
+- Assinatura: organiza recursos e grupos de recursos em um escopo administrativo e de cobrança.
+
+**Assinatura x Grupo de gerenciamento**
+
+- Assinatura: contém grupos de recursos.
+- Grupo de gerenciamento: organiza várias assinaturas.
+
+**Grupo de recursos x Grupo de gerenciamento**
+
+- Grupo de recursos: organiza recursos.
+- Grupo de gerenciamento: organiza assinaturas.
+
+2.9 Como isso pode aparecer na prova?
+
+- Se a questão falar sobre organizar máquinas virtuais e bancos de dados de uma aplicação, pense em grupo de recursos.
+- Se falar sobre separar cobranças e recursos de diferentes departamentos, pense em assinaturas.
+- Se falar sobre aplicar políticas a várias assinaturas, pense em grupos de gerenciamento.
+- Se falar sobre uma máquina virtual ou uma conta de armazenamento criada no Azure, pense em recurso.
+- Se perguntar onde ficam os grupos de recursos, lembre-se de que eles pertencem a uma assinatura.
+- Se afirmar que um recurso pode pertencer simultaneamente a vários grupos de recursos, a afirmação está incorreta.
+
+**Anotação para guardar:** a hierarquia é Grupo de gerenciamento → Assinatura → Grupo de recursos → Recurso.
+
+
+---
+
+
+Revisão rápida dos tópicos 1 e 2
+
+
+Antes de avançar, tente explicar sem consultar:
+
+1. Qual é a diferença entre região e zona de disponibilidade?
+2. Qual é a diferença entre zona de disponibilidade e par de regiões?
+3. O que caracteriza uma região soberana?
+4. O que é um recurso no Azure?
+5. Para que serve um grupo de recursos?
+6. Qual é a função de uma assinatura?
+7. Para que servem os grupos de gerenciamento?
+8. Qual é a ordem correta da hierarquia lógica do Azure?
